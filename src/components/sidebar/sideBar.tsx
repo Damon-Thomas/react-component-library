@@ -8,9 +8,7 @@ export default function SideBar() {
   return (
     <>
       <aside
-        className={`${
-          trigger ? "hidden" : "block"
-        } sm:block fixed h-screen left-0 flex flex-col align-middle bg-white boreder-r shadow-sm w-10 sm:w-15`}
+        className={`hidden sm:block fixed h-screen left-0 bg-white shadow-sm w-15 `}
       >
         <div className="logo flex justify-center items-center pt-2">
           <svg
@@ -30,7 +28,7 @@ export default function SideBar() {
         </div>
         <nav className=""></nav>
       </aside>
-      <div className="triggerIcon fixed top-0 left-10 sm:left-15 p-2">
+      <div className="triggerIcon fixed top-0 left-0 sm:left-15 p-2">
         <button
           onClick={() => {
             setTrigger(!trigger);
