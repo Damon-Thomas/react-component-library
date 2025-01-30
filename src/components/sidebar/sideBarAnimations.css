@@ -1,0 +1,11 @@
+.sidebar-icon path {
+  transition: d 0.5s ease;
+}
+
+.sidebar-icon.open path:last-child {
+  d: path("m14 9 3 3-3 3");
+}
+
+.sidebar-icon.closed path:last-child {
+  d: path("m16 15-3-3 3-3");
+}

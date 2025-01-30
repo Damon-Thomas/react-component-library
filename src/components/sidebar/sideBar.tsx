@@ -1,4 +1,5 @@
 import React from "react";
+import "./sideBarAnimations.css";
 
 export default function SideBar() {
   const [trigger, setTrigger] = React.useState(true);
@@ -36,41 +37,24 @@ export default function SideBar() {
             setOpen(!open);
           }}
         >
-          {open ? (
-            <svg
-              className="w-8 h-8 text-zinc-950"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect width="18" height="18" x="3" y="3" rx="2" />
-              <path d="M9 3v18" />
-              <path d="m14 9 3 3-3 3" />
-            </svg>
-          ) : (
-            <svg
-              className="w-8 h-8 text-zinc-950"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect width="18" height="18" x="3" y="3" rx="2" />
-              <path d="M9 3v18" />
-              <path d="m16 15-3-3 3-3" />
-            </svg>
-          )}
+          <svg
+            className={`w-8 h-8 text-zinc-950 sidebar-icon ${
+              open ? "open" : "closed"
+            }`}
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <rect width="18" height="18" x="3" y="3" rx="2" />
+            <path d="M9 3v18" />
+            <path d="m16 15-3-3 3-3" />
+          </svg>
         </button>
       </div>
     </>
