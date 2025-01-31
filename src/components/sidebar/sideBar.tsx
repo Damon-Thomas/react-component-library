@@ -30,8 +30,8 @@ export default function SideBar() {
       </aside>
       <aside
         className={`hiddenbar ease-in duration-500 ${
-          open ? "open translate-x-15" : "closed -translate-x-full"
-        } h-screen fixed left-0 bg-white shadow-sm w-50`}
+          open ? "open translate-x-0" : "closed -translate-x-full"
+        } h-screen fixed left-15 bg-white shadow-sm w-50`}
       >
         <div className="h-full gap-4 sidebarDetails flex flex-col justify-center items-center">
           <p className="item text-black">content1</p>
