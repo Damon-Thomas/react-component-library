@@ -8,7 +8,7 @@ export default function SideBar() {
   return (
     <>
       <aside
-        className={`hidden sm:block fixed h-screen left-0 bg-white shadow-sm w-15 `}
+        className={`z-10 hidden sm:block fixed h-screen left-0 bg-white w-15 `}
       >
         <div className="logo flex justify-center items-center pt-2">
           <svg
@@ -28,7 +28,21 @@ export default function SideBar() {
         </div>
         <nav className=""></nav>
       </aside>
-      <div className="triggerIcon fixed top-0 left-0 sm:left-15 p-2">
+      <aside
+        className={`hiddenbar ease-in duration-500 ${
+          open ? "open translate-x-15" : "closed -translate-x-full"
+        } h-screen fixed left-0 bg-white shadow-sm w-50`}
+      >
+        <div className="h-full gap-4 sidebarDetails flex flex-col justify-center items-center">
+          <p className="item text-black">content1</p>
+          <p className="item text-black">content2</p>
+          <p className="item text-black">content3</p>
+          <p className="item text-black">content4</p>
+          <p className="item text-black">content5</p>
+          <p className="item text-black">content6</p>
+        </div>
+      </aside>
+      <div className="z-10 triggerIcon fixed top-0 left-0 sm:left-15 p-2">
         <button
           onClick={() => {
             setTrigger(!trigger);
@@ -36,8 +50,8 @@ export default function SideBar() {
           }}
         >
           <svg
-            className={`w-8 h-8 text-zinc-950 sidebar-icon ${
-              open ? "open" : "closed"
+            className={`ease-in duration-500 translate-x-0 w-8 h-8 text-zinc-950 sidebar-icon ${
+              open ? "open translate-x-50" : "closed translate-x-0"
             }`}
             xmlns="http://www.w3.org/2000/svg"
             width="24"
