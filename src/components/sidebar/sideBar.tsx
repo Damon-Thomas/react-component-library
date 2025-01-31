@@ -34,12 +34,12 @@ export default function SideBar() {
         } h-screen fixed left-15 bg-white shadow-sm w-50`}
       >
         <div className="h-full gap-4 sidebarDetails flex flex-col justify-center items-center">
-          <p className="item text-black">content1</p>
-          <p className="item text-black">content2</p>
-          <p className="item text-black">content3</p>
-          <p className="item text-black">content4</p>
-          <p className="item text-black">content5</p>
-          <p className="item text-black">content6</p>
+          <p className="sidebarItem sidebarDescriptor">content1</p>
+          <p className="sidebarItem sidebarDescriptor">content2</p>
+          <p className="sidebarItem sidebarDescriptor">content3</p>
+          <p className="sidebarItem sidebarDescriptor">content4</p>
+          <p className="sidebarItem sidebarDescriptor">content5</p>
+          <p className="sidebarItem sidebarDescriptor">content6</p>
         </div>
       </aside>
       <div className="z-10 triggerIcon fixed top-0 left-0 sm:left-15 p-2">
